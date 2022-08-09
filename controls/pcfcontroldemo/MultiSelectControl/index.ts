@@ -101,11 +101,11 @@ export class MultiSelectPCFControl implements ComponentFramework.StandardControl
 			this.props.value.split(",").forEach(c=>{			
 				if (count > 0)
 				{
-					qs = qs + ' or ' + this.props.displayValueField + ' eq ' + c
+					qs = qs + ' or ' + this.props.displayValueField + ' eq ' + `'${c}'`
 				}
 				else
 				{
-					qs = qs + this.props.displayValueField + ' eq ' + c
+					qs = qs + this.props.displayValueField + ' eq ' + `'${c}'`
 				}
 				count++;
 			});
